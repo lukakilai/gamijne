@@ -15,12 +15,12 @@ export default function Home() {
   }
 
   const title = "გამიჯნე რაც გინდა";
-  const quote = `მე გავმიჯნე ${query.a} და ${query.b}`;
+  const ogtitle = `მე გავმიჯნე ${query.a} და ${query.b}`;
   const url = "https://gamijne.netlify.app/";
 
   return (
     <Fragment>
-      <Meta title={title} url={url} quote={quote} />
+      <Meta title={title} url={url} ogtitle={ogtitle} />
       <main className="w-screen h-screen grid place-items-center">
         <section className="flex flex-col justify-start items-center border w-1/2 py-6 space-y-4">
           <p>უნდა გავმიჯნოთ</p>
@@ -42,7 +42,7 @@ export default function Home() {
           {/* <div className="pt-8">
             <button className="btn">გამიჯნე!</button>
           </div> */}
-          <ShareButton title={title} url={url} quote={quote} />
+          <ShareButton title={title} url={url} />
         </section>
       </main>
     </Fragment>
