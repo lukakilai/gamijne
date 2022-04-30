@@ -14,12 +14,13 @@ export default function Home() {
     setQuery({ ...query, [e.target.name]: e.target.value });
   }
 
-  const pageTitle = `მე გავმიჯნე ${query.a} და ${query.b}`;
-  const pageUrl = "https://gamijne.netlify.app/";
+  const title = "გამიჯნე რაც გინდა";
+  const quote = `მე გავმიჯნე ${query.a} და ${query.b}`;
+  const url = "https://gamijne.netlify.app/";
 
   return (
     <Fragment>
-      <Meta title={pageTitle} url={pageUrl} />
+      <Meta title={title} url={url} quote={quote} />
       <main className="w-screen h-screen grid place-items-center">
         <section className="flex flex-col justify-start items-center border w-1/2 py-6 space-y-4">
           <p>უნდა გავმიჯნოთ</p>
@@ -41,7 +42,7 @@ export default function Home() {
           {/* <div className="pt-8">
             <button className="btn">გამიჯნე!</button>
           </div> */}
-          <ShareButton title={pageTitle} url={pageUrl} />
+          <ShareButton title={title} url={url} quote={quote} />
         </section>
       </main>
     </Fragment>

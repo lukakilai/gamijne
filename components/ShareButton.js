@@ -1,11 +1,11 @@
 import { FacebookShareButton, FacebookIcon } from "react-share";
 
-export default function ShareButton({ title, url }) {
+export default function ShareButton({ title, url, quote }) {
   return (
     <div className="w-1/2 bg-fb rounded-lg overflow-hidden pl-0 pr-6 font-bold text-white ">
       <FacebookShareButton
         url={url}
-        quote={title}
+        quote={quote}
         className="flex flex-row justify-between items-center w-full"
       >
         <FacebookIcon />
