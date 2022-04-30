@@ -15,7 +15,7 @@ export default function Home() {
   }
 
   const pageTitle = `მე გავმიჯნე ${query.a} და ${query.b}`;
-  const pageUrl = "http://www.gamijne.netlify.app";
+  const pageUrl = "https://gamijne.netlify.app/";
 
   return (
     <Fragment>
@@ -41,7 +41,7 @@ export default function Home() {
           {/* <div className="pt-8">
             <button className="btn">გამიჯნე!</button>
           </div> */}
-          <ShareButton url={pageUrl} />
+          <ShareButton title={pageTitle} url={pageUrl} />
         </section>
       </main>
     </Fragment>

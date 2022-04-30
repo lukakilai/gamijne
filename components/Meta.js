@@ -3,9 +3,9 @@ import Head from "next/head";
 export default function Meta({ title, url }) {
   return (
     <Head>
+      <title>{title}</title>
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
-      <meta property="og:title" content="blabla" />
       <meta
         property="og:description"
         content="How much does culture influence creative thinking?"
