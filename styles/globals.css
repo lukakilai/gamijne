@@ -1,16 +1,22 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("//cdn.web-fonts.ge/fonts/alk-life/css/alk-life.min.css");
+@import url("//cdn.web-fonts.ge/fonts/alk-tommaso/css/alk-tommaso.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply font-gen text-gen;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .samijni {
+    @apply w-full border border-gray-300 rounded-md bg-white text-center ring-0 transition-all duration-75 focus:border-pink-400 focus:ring-2 focus:ring-pink-400 outline-none shadow-lg active:ring-pink-400 font-input text-gen tracking-wider;
+  }
 
-* {
-  box-sizing: border-box;
+  .fb-btn {
+    @apply px-8 py-2 bg-fb rounded-lg text-white font-bold hover:bg-blue-500 transition-all duration-100;
+  }
 }
