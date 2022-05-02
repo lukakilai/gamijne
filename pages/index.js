@@ -1,10 +1,12 @@
 import { Fragment, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
-import Meta from "../components/Meta";
 import ShareButton from "../components/ShareButton";
 
 export default function Home() {
+  const router = useRouter();
+
   const [query, setQuery] = useState({
     a: "",
     b: "",
@@ -14,13 +16,25 @@ export default function Home() {
     setQuery({ ...query, [e.target.name]: e.target.value });
   }
 
+  function gamijvna() {
+    router.push(`/success?a=${query.a}&b=${query.b}`);
+  }
+
   const title = "გამიჯნე რაც გინდა";
   const ogtitle = `მე გავმიჯნე ${query.a} და ${query.b}`;
   const url = "https://gamijne.netlify.app/";
 
   return (
     <Fragment>
-      <Meta title={title} url={url} ogtitle={ogtitle} />
+      <Head>
+        <title>გამიჯნე რაც გინდა!</title>
+        <meta
+          property="og:image"
+          content="https://drive.google.com/file/d/1s5c0AvkWmF0KmrqHCyhH7KZgJL-niWkB/view?usp=sharing"
+        />
+        <meta property="og:image:alt" content="mijna" />
+        <meta property="og:type" content="website" />
+      </Head>
       <main className="w-screen h-screen grid place-items-center">
         <section className="flex flex-col justify-start items-center border w-1/2 py-6 space-y-4">
           <p>უნდა გავმიჯნოთ</p>
@@ -39,10 +53,12 @@ export default function Home() {
             onChange={handleChange}
             className="samijni"
           />
-          {/* <div className="pt-8">
-            <button className="btn">გამიჯნე!</button>
-          </div> */}
-          <ShareButton title={title} url={url} />
+          <div className="pt-8">
+            <button className="btn" onClick={gamijvna}>
+              გამიჯნე!
+            </button>
+          </div>
+          {/* <ShareButton title={title} url={url} /> */}
         </section>
       </main>
     </Fragment>
