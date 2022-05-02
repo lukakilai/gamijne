@@ -34,7 +34,8 @@ export default function Gamijnuli({ a, b, ogtitle, ogurl }) {
 
         <meta
           property="og:image"
-          content="https://drive.google.com/file/d/1s5c0AvkWmF0KmrqHCyhH7KZgJL-niWkB/view?usp=sharing"
+          // content="https://drive.google.com/file/d/1s5c0AvkWmF0KmrqHCyhH7KZgJL-niWkB/view?usp=sharing"
+          content="https://pbs.twimg.com/profile_images/672684217/notequalsymbol3.jpg"
         />
         <meta property="og:image:alt" content="mijna" />
         <meta property="og:type" content="website" />

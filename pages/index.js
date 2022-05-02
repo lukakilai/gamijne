@@ -20,10 +20,6 @@ export default function Home() {
     router.push(`/success?a=${query.a}&b=${query.b}`);
   }
 
-  const title = "გამიჯნე რაც გინდა";
-  const ogtitle = `მე გავმიჯნე ${query.a} და ${query.b}`;
-  const url = "https://gamijne.netlify.app/";
-
   return (
     <Fragment>
       <Head>
