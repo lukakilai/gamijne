@@ -6,11 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        input: ["ALK Tommaso", "sans-serif"],
-        gen: ["ALK Life", "sans-serif"],
-      },
-      fontSize: {
-        gen: "24px",
+        nusx: ["BPG Algeti Compact", "sans-serif"],
+        caps: ["ArchyEDT-Bold", "sans-serif"],
       },
       colors: {
         fb: "#3A5996",

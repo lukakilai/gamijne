@@ -12,6 +12,8 @@ export default function Home() {
     b: "",
   });
 
+  const btnDisabled = query.a === "" || query.b === "";
+
   function handleChange(e) {
     setQuery({ ...query, [e.target.name]: e.target.value });
   }
@@ -31,15 +33,16 @@ export default function Home() {
         <meta property="og:image:alt" content="mijna" />
         <meta property="og:type" content="website" />
       </Head>
-      <main className="w-screen h-screen grid place-items-center">
-        <section className="flex flex-col justify-start items-center border w-1/2 py-6 space-y-4">
+      <main className="w-screen h-screen grid place-items-center bg-lime-50">
+        <section className="flex flex-col justify-start items-center w-3/4 sm:w-2/3 md:w-1/3 py-6 space-y-4">
           <p>უნდა გავმიჯნოთ</p>
           <input
             type="text"
             name="a"
             value={query.a}
             onChange={handleChange}
-            className="samijni"
+            className="input"
+            placeholder="სპორტი"
           />
           <p>და</p>
           <input
@@ -47,14 +50,18 @@ export default function Home() {
             name="b"
             value={query.b}
             onChange={handleChange}
-            className="samijni"
+            className="input"
+            placeholder="პოლიტიკა"
           />
           <div className="pt-8">
-            <button className="btn" onClick={gamijvna}>
+            <button
+              className="btn bg-teal-500 hover:bg-teal-600  disabled:opacity-30 disabled:bg-teal-400 disabled:shadow-none"
+              onClick={gamijvna}
+              // disabled={btnDisabled}
+            >
               გამიჯნე!
             </button>
           </div>
-          {/* <ShareButton title={title} url={url} /> */}
         </section>
       </main>
     </Fragment>

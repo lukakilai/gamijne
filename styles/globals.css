@@ -1,19 +1,29 @@
-@import url("//cdn.web-fonts.ge/fonts/alk-life/css/alk-life.min.css");
-@import url("//cdn.web-fonts.ge/fonts/alk-tommaso/css/alk-tommaso.min.css");
+/* inputs font */
+@import url("//cdn.web-fonts.ge/fonts/bpg-algeti-compact/css/bpg-algeti-compact.min.css");
+/* btn font */
+@import url("//cdn.web-fonts.ge/fonts/archyedt-bold/css/archyedt-bold.min.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply text-[20px];
+  }
+
   p {
-    @apply font-gen text-gen;
+    @apply font-nusx text-xl;
   }
 }
 
 @layer components {
-  .samijni {
-    @apply w-full border border-gray-300 rounded-md bg-white text-center ring-0 transition-all duration-75 focus:border-pink-400 focus:ring-2 focus:ring-pink-400 outline-none shadow-lg active:ring-pink-400 font-input text-gen tracking-wider;
+  .input {
+    @apply text-lg w-full border border-gray-300 rounded-md bg-white text-center ring-0 transition-all duration-75 focus:border-pink-400 focus:ring-2 focus:ring-pink-400 outline-none shadow-lg active:ring-pink-400 font-nusx tracking-wider placeholder-slate-300;
+  }
+
+  .btn {
+    @apply font-caps px-2 py-2  text-white text-lg rounded-xl hover:shadow-xl;
   }
 
   .fb-btn {
