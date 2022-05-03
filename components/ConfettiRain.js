@@ -19,7 +19,7 @@ export default function ConfettiRain() {
       width={sizes.ww}
       height={sizes.wh}
       numberOfPieces={200}
-      opacity={0.5}
+      opacity={0.8}
       // tweenDuration={20}
       // recycle={false}
     />

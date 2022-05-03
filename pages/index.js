@@ -28,13 +28,13 @@ export default function Home() {
         <title>გამიჯნე რაც გინდა!</title>
         <meta
           property="og:image"
-          content="https://drive.google.com/file/d/1s5c0AvkWmF0KmrqHCyhH7KZgJL-niWkB/view?usp=sharing"
+          content="https://i.postimg.cc/VLWbVqRB/thumb.png"
         />
         <meta property="og:image:alt" content="mijna" />
         <meta property="og:type" content="website" />
       </Head>
-      <main className="w-screen h-screen grid place-items-center bg-lime-50">
-        <section className="flex flex-col justify-start items-center w-3/4 sm:w-2/3 md:w-1/3 py-6 space-y-4">
+      <main className="grid h-screen w-screen place-items-center bg-gradient-to-tr from-rose-500 to-yellow-400">
+        <section className="flex w-3/4 flex-col items-center justify-start space-y-4 rounded-xl bg-white  px-6 py-6 shadow-xl sm:w-2/3 md:w-1/3">
           <p>უნდა გავმიჯნოთ</p>
           <input
             type="text"
@@ -55,11 +55,11 @@ export default function Home() {
           />
           <div className="pt-8">
             <button
-              className="btn bg-teal-500 hover:bg-teal-600  disabled:opacity-30 disabled:bg-teal-400 disabled:shadow-none"
+              className="btn bg-emerald-500 hover:bg-emerald-600  disabled:bg-teal-400 disabled:opacity-30 disabled:shadow-none"
               onClick={gamijvna}
-              // disabled={btnDisabled}
+              disabled={btnDisabled}
             >
-              გამიჯნე!
+              გამიჯნე
             </button>
           </div>
         </section>

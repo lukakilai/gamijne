@@ -19,14 +19,14 @@
 
 @layer components {
   .input {
-    @apply text-lg w-full border border-gray-300 rounded-md bg-white text-center ring-0 transition-all duration-75 focus:border-pink-400 focus:ring-2 focus:ring-pink-400 outline-none shadow-lg active:ring-pink-400 font-nusx tracking-wider placeholder-slate-300;
+    @apply w-full rounded-md border border-gray-300 bg-white text-center font-nusx text-lg tracking-wider text-gray-800 placeholder-slate-300 shadow-sm outline-none ring-0 transition-all duration-75 hover:shadow-md focus:border-sky-400 focus:ring-2 focus:ring-sky-400 active:ring-sky-400;
   }
 
   .btn {
-    @apply font-caps px-2 py-2  text-white text-lg rounded-xl hover:shadow-xl;
+    @apply rounded-xl px-4 py-1  font-caps text-lg text-white transition-all duration-100 hover:shadow-xl;
   }
 
   .fb-btn {
-    @apply px-8 py-2 bg-fb rounded-lg text-white font-bold hover:bg-blue-500 transition-all duration-100;
+    @apply rounded-lg bg-fb px-8 py-2 font-bold text-white transition-all duration-100 hover:bg-blue-500;
   }
 }
