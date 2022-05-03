@@ -1,12 +1,23 @@
+import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 
 export default function ConfettiRain() {
-  const [ww, wh] = [window.innerWidth, window.innerHeight];
+  const [sizes, setSizes] = useState({
+    ww: 0,
+    wh: 0,
+  });
+
+  useEffect(() => {
+    setSizes({
+      ww: window.innerWidth,
+      wh: window.innerHeight,
+    });
+  }, []);
 
   return (
     <Confetti
-      width={ww}
-      height={wh}
+      width={sizes.ww}
+      height={sizes.wh}
       numberOfPieces={200}
       opacity={0.5}
       // tweenDuration={20}
