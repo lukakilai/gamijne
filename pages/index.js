@@ -31,7 +31,7 @@ export default function Home() {
         <meta property="og:url" content="https://gamijne.netlify.app/" />
         <meta
           property="og:image"
-          content="https://i.postimg.cc/VLWbVqRB/thumb.png"
+          content="https://i.postimg.cc/cLgKyhvV/mijn.png"
         />
         <meta property="og:image:alt" content="mijna" />
         <meta property="og:type" content="website" />
