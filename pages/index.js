@@ -25,7 +25,10 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <title>გამიჯნე რაც გინდა!</title>
+        <title>გამიჯნე ყველაფერი</title>
+        <meta property="og:title" content="გამიჯნე ყველაფერი" />
+        <meta property="og:description" content="რაც შენს გულს გაუხარდება" />
+        <meta property="og:url" content="https://gamijne.netlify.app/" />
         <meta
           property="og:image"
           content="https://i.postimg.cc/VLWbVqRB/thumb.png"

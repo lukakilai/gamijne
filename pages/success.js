@@ -29,7 +29,10 @@ export default function Gamijnuli({ a, b, ogtitle, ogurl }) {
         <title>{ogtitle}</title>
         <meta property="og:title" content={ogtitle} />
         <meta property="og:url" content={ogurl} />
-        <meta property="og:description" content="შენც შეგიძლია, გამიჯნო!" />
+        <meta
+          property="og:description"
+          content="გამიჯნე ყველაფერი, რაც გასამიჯნია"
+        />
         <meta
           property="og:image"
           content="https://i.postimg.cc/VLWbVqRB/thumb.png"
