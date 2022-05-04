@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
@@ -22,6 +23,20 @@ export async function getServerSideProps(context) {
 
 export default function Gamijnuli({ a, b, ogtitle, ogurl }) {
   const router = useRouter();
+
+  async function shareMobile() {
+    const data = {
+      title: "გამიჯნე ყველაფერი",
+      text: ogtitle,
+      url: ogurl,
+    };
+    try {
+      await navigator.share(data);
+      resultPara.textContent = "MDN shared successfully";
+    } catch (err) {
+      resultPara.textContent = "Error: " + err;
+    }
+  }
 
   return (
     <Fragment>
@@ -53,7 +68,15 @@ export default function Gamijnuli({ a, b, ogtitle, ogurl }) {
             </div>
           </div>
           <div className="flex flex-col items-center justify-start space-y-5">
-            <ShareButton url={ogurl} />
+            {!isMobile && <ShareButton url={ogurl} />}
+            {isMobile && (
+              <button
+                className="btn bg-blue-400 hover:bg-blue-500 hover:shadow-xl"
+                onClick={shareMobile}
+              >
+                გააზიარე
+              </button>
+            )}
             <button
               className="btn bg-amber-400 hover:bg-amber-500 hover:shadow-xl"
               onClick={() => router.push("/")}
