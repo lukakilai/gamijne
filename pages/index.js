@@ -37,8 +37,8 @@ export default function Home() {
         <meta property="og:type" content="website" />
       </Head>
       <main className="grid h-screen w-screen place-items-center bg-gradient-to-tr from-rose-500 to-yellow-400">
-        <section className="flex w-3/4 flex-col items-center justify-start space-y-4 rounded-xl bg-white  px-6 py-6 shadow-xl sm:w-2/3 md:w-1/3">
-          <p>უნდა გავმიჯნოთ</p>
+        <section className="flex w-3/4 max-w-[420px] flex-col items-center justify-start space-y-4 rounded-xl bg-white  px-6 py-6 shadow-xl sm:w-2/3">
+          <p className="text-center">უნდა გავმიჯნოთ</p>
           <input
             type="text"
             name="a"
@@ -58,7 +58,7 @@ export default function Home() {
           />
           <div className="pt-8">
             <button
-              className="btn bg-emerald-500 hover:bg-emerald-600  disabled:bg-teal-400 disabled:opacity-30 disabled:shadow-none"
+              className="btn bg-emerald-500 hover:bg-emerald-600 disabled:scale-100 disabled:bg-teal-400 disabled:opacity-30 disabled:shadow-none"
               onClick={gamijvna}
               disabled={btnDisabled}
             >

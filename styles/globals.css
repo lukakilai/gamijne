@@ -23,10 +23,6 @@
   }
 
   .btn {
-    @apply rounded-xl px-4 py-1  font-caps text-lg text-white transition-all duration-100 hover:shadow-xl;
-  }
-
-  .fb-btn {
-    @apply rounded-lg bg-fb px-8 py-2 font-bold text-white transition-all duration-100 hover:bg-blue-500;
+    @apply rounded-lg px-4 py-1 font-caps text-base tracking-wider text-white transition-all duration-100 hover:scale-105 hover:shadow-xl;
   }
 }
