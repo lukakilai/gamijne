@@ -38,7 +38,9 @@ export default function Gamijnuli({ a, b, ogtitle, ogurl }) {
     try {
       await navigator.share(data);
     } catch (err) {
-      alert(err);
+      alert(
+        "დაფიქსირდა ხარვეზი გაზიარებასთან დაკავშირებით. მყისიერად შეიქმნება კომისია და დაიწყება მიზეზების მოკვლევა"
+      );
     }
   }
 
